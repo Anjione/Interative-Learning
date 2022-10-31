@@ -15,6 +15,9 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
+import { StudentManageComponent } from './sysadmin/student-manage/student-manage.component';
+import { TeacherManageComponent } from './sysadmin/teacher-manage/teacher-manage.component';
+import { QuizManageComponent } from './sysadmin/quiz-manage/quiz-manage.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { MatListModule } from '@angular/material/list';
     SysadminComponent,
     SidenavComponent,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    StudentManageComponent,
+    TeacherManageComponent,
+    QuizManageComponent
   ],
   imports: [
     BrowserModule,
