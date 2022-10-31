@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SysadminComponent implements OnInit {
 
+  sideBarOpen = true;
+
+  sideBarToggler() {
+    this.sideBarOpen = !this.sideBarOpen;
+  }
+
   constructor() { }
 
   ngOnInit(): void {
