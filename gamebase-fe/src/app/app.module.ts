@@ -25,8 +25,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './auth/components/register/register.component';
-import { UserComponent } from './components/user/user.component';
 import { TeacherComponent } from './components/teacher/teacher.component';
+import { StudentComponent } from './components/student/student.component';
 
 
 @NgModule({
@@ -42,8 +42,8 @@ import { TeacherComponent } from './components/teacher/teacher.component';
     LoginComponent,
     RegisterComponent,
     ResetPasswordComponent,
-    UserComponent,
     TeacherComponent,
+    StudentComponent,
   ],
   imports: [
     BrowserModule,
