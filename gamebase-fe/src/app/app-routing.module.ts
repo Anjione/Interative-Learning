@@ -1,9 +1,9 @@
-import { UserComponent } from './components/student/user.component';
 import { AuthComponent } from './auth/auth.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { SysadminComponent } from './sysadmin/sysadmin.component';
 import { TeacherComponent } from './components/teacher/teacher.component';
+import { StudentComponent } from './components/student/student.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'auth', pathMatch: 'full'},
@@ -19,8 +19,8 @@ const routes: Routes = [
   },
   {
     path: 'user',
-    component: UserComponent,
-    loadChildren: () => import('./components/student/user.module').then(m => m.UserModule)
+    component: StudentComponent,
+    loadChildren: () => import('./components/student/student.module').then(m => m.StudentModule)
   },
   {
     path: 'teacher',

@@ -8,20 +8,20 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
-  form: FormGroup = new FormGroup({
-    username: new FormControl(''),
-    password: new FormControl(''),
-  });
+  username = new FormControl();
+  password = new FormControl();
 
-  submit() {
-    if (this.form.valid) {
-      this.submitEM.emit(this.form.value);
+  getErrorMessage() {
+    if (this.username.hasError('required')) {
+      return 'Trường này không được bỏ trống';
     }
+    if (this.password.hasError('required')) {
+      return 'Trường này không được bỏ trống';
+    }
+    return;
   }
-  @Input() error: string | null | undefined;
 
-  @Output() submitEM = new EventEmitter();
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
   }

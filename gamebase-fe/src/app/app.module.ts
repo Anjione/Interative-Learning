@@ -13,6 +13,8 @@ import { QuizManageComponent } from './sysadmin/quiz-manage/quiz-manage.componen
 import { AuthComponent } from './auth/auth.component';
 import { LoginComponent } from './auth/login/login.component';
 import { ResetPasswordComponent } from './auth/components/reset-password/reset-password.component';
+import { TeacherComponent } from './components/teacher/teacher.component';
+import { StudentComponent } from './components/student/student.component';
 
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -25,9 +27,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './auth/components/register/register.component';
-import { TeacherComponent } from './components/teacher/teacher.component';
-import { StudentComponent } from './components/student/student.component';
-
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -60,6 +60,7 @@ import { StudentComponent } from './components/student/student.component';
     MatCardModule,
     MatInputModule,
     MatButtonModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,1 +1,107 @@
-<p>register works!</p>
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row" style="margin: 30px 0">
+            <div class="col-md-6 offset-md-3">
+                <div class="container text-center" style="margin-bottom: 20px">
+                    <a routerLink="/register"><img src="../../../../assets/logo/logo.png" alt="Đăng ký"></a>
+                </div>
+                <h3 class="text-center">ĐĂNG KÝ</h3>
+
+                {{ user | json}}
+                <form (ngSubmit)="onSubmit()">
+                    <!-- Fullname field -->
+                    <table class="full-width" cellspacing="0">
+                        <tr>
+                            <td>
+                                <mat-form-field class="full-width" appearance="outline">
+                                <mat-label>Họ đệm</mat-label>
+                                <input 
+                                    [(ngModel)]="user.lastname" 
+                                    matInput placeholder="Nhập họ đệm" 
+                                    name="lastname" 
+                                    [formControl]="lastname" 
+                                    required>
+                                <mat-error *ngIf="lastname.invalid">{{getErrorMessage()}}</mat-error>
+                                </mat-form-field>
+                            </td>
+                            <td>
+                                <mat-form-field class="full-width" appearance="outline">
+                                <mat-label>Tên</mat-label>
+                                <input
+                                    [(ngModel)]="user.firstname"
+                                    name="firstnam"
+                                    matInput placeholder="Nhập tên" 
+                                    [formControl]="firstname" 
+                                    required>
+                                <mat-error *ngIf="firstname.invalid">{{getErrorMessage()}}</mat-error>
+                                </mat-form-field>
+                            </td>
+                        </tr>
+                    </table>
+                    <!-- Username field -->
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>Username</mat-label>
+                        <input 
+                            [(ngModel)]="user.username"
+                            autocomplete="off"
+                            name="username"
+                            matInput 
+                            placeholder="Nhập username" 
+                            [formControl]="username" 
+                            required>
+                        <mat-error *ngIf="username.invalid">{{getErrorMessage()}}</mat-error>
+                    </mat-form-field>
+                    <!-- Password field -->
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>Mật khẩu</mat-label>
+                        <input
+                            autocomplete="off"
+                            [(ngModel)]="user.password"
+                            name="password"
+                            type="password" 
+                            matInput 
+                            placeholder="Nhập mật khẩu" 
+                            [formControl]="password" 
+                            required>
+                        <mat-error *ngIf="password.invalid">{{getErrorMessage()}}</mat-error>
+                    </mat-form-field>
+                    <!-- Confirm Password field -->
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>Xác nhận mật khẩu</mat-label>
+                        <input 
+                            autocomplete="off"
+                            [(ngModel)]="user.password"
+                            name="confirmPassword"
+                            type="password" 
+                            matInput 
+                            placeholder="Nhập mật khẩu" 
+                            [formControl]="password" 
+                            required>
+                        <mat-error *ngIf="password.invalid">{{getErrorMessage()}}</mat-error>
+                    </mat-form-field>
+                    <!-- Email field -->
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>Email</mat-label>
+                        <input 
+                            autocomplete="off"
+                            [(ngModel)]="user.email"
+                            name="email"
+                            matInput 
+                            placeholder="Nhập email" 
+                            [formControl]="email" 
+                            required>
+                        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                    </mat-form-field>
+                    <!-- Phonenumber field
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>Số điện thoại</mat-label>
+                        <input matInput placeholder="Nhập số điện thoại">
+                    </mat-form-field> -->
+                    <div class="container text-center">
+                        <button type="submit" mat-raised-button color="primary" style="margin-top: 20px; padding: 0 30px">Đăng ký</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
