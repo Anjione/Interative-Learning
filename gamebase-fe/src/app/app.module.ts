@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +13,7 @@ import { TeacherManageComponent } from './sysadmin/teacher-manage/teacher-manage
 import { QuizManageComponent } from './sysadmin/quiz-manage/quiz-manage.component';
 import { AuthComponent } from './auth/auth.component';
 import { LoginComponent } from './auth/login/login.component';
+import { HomeComponent } from './auth/components/home/home.component';
 import { ResetPasswordComponent } from './auth/components/reset-password/reset-password.component';
 import { TeacherComponent } from './components/teacher/teacher.component';
 import { StudentComponent } from './components/student/student.component';
@@ -28,6 +30,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './auth/components/register/register.component';
 import { FormsModule } from '@angular/forms';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+
+
 
 @NgModule({
   declarations: [
@@ -40,6 +45,7 @@ import { FormsModule } from '@angular/forms';
     QuizManageComponent,
     AuthComponent,
     LoginComponent,
+    HomeComponent,
     RegisterComponent,
     ResetPasswordComponent,
     TeacherComponent,
@@ -48,6 +54,7 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     ReactiveFormsModule, 
     BrowserAnimationsModule,
     // * MATERIAL IMPORTS
@@ -60,6 +67,7 @@ import { FormsModule } from '@angular/forms';
     MatCardModule,
     MatInputModule,
     MatButtonModule,
+    MatSnackBarModule,
     FormsModule,
   ],
   providers: [],

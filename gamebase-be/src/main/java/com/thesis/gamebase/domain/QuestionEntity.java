@@ -18,7 +18,7 @@ import java.util.Set;
 public class QuestionEntity {
     @Id
     @Column(name = "id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
     @Column(name = "quiz_id")

@@ -1,28 +1,50 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <div class="container">
+        <a routerLink="/"><mat-icon>school</mat-icon><span style="font-family: 'Merriweather', serif;">QuizKid</span></a>
+    </div>
+    <span class="example-spacer"></span>
+    <a routerLink="/auth/login">
+        <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <mat-icon>login</mat-icon>
+        </button>
+    </a>
+    <a routerLink="/auth/register">
+        <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <mat-icon>person</mat-icon>
+        </button>
+    </a>
+</mat-toolbar>
+  
 <div class="bootstrap-wrapper">
     <div class="container">
         <div class="row" style="margin: 30px 0">
             <div class="col-md-6 offset-md-3">
-                <div class="container text-center" style="margin-bottom: 20px">
-                    <a routerLink="/register"><img src="../../../../assets/logo/logo.png" alt="Đăng ký"></a>
-                </div>
-                <h3 class="text-center">ĐĂNG NHẬP</h3>
-                <form>
-                    <!-- Username field -->
-                    <mat-form-field appearance="outline" class="full-width">
-                        <mat-label>Username</mat-label>
-                        <input matInput placeholder="Nhập username" [formControl]="username" required>
-                        <mat-error *ngIf="username.invalid">{{getErrorMessage()}}</mat-error>
-                    </mat-form-field>
-                    <!-- Password field -->
-                    <mat-form-field appearance="outline" class="full-width">
-                        <mat-label>Mật khẩu</mat-label>
-                        <input matInput placeholder="Nhập mật khẩu" [formControl]="password" required>
-                        <mat-error *ngIf="password.invalid">{{getErrorMessage()}}</mat-error>
-                    </mat-form-field>
-                    <div class="container text-center">
-                        <button mat-raised-button color="primary" style="margin-top: 20px; padding: 0 30px">Đăng nhập</button>
+                <mat-card>
+                    <div class="container text-center" style="margin-bottom: 20px">
+                        <a routerLink="/register"><img src="../../../../assets/logo/logo.png" alt="Đăng nhập"></a>
                     </div>
-                </form>
+                    <h3 class="text-center">ĐĂNG NHẬP</h3>
+                    <form action="">
+                        <!-- Username field -->
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Tên đăng nhập</mat-label>
+                            <input matInput placeholder="Nhập username" [formControl]="username" required>
+                            <mat-error *ngIf="username.invalid">{{getErrorMessage()}}</mat-error>
+                        </mat-form-field>
+                        <!-- Password field -->
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Mật khẩu</mat-label>
+                            <input matInput placeholder="Nhập mật khẩu" [formControl]="password" required>
+                            <mat-error *ngIf="password.invalid">{{getErrorMessage()}}</mat-error>
+                        </mat-form-field>
+                        <div class="container text-center">
+                            <button mat-raised-button color="primary" style="margin-top: 20px; padding: 0 30px">Đăng nhập</button>
+                        </div>
+                    </form>
+                </mat-card>
             </div>
         </div>
     </div>

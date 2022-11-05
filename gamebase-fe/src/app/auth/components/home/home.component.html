@@ -1,1 +1,19 @@
-<p>home works!</p>
+<mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <div class="container">
+        <a routerLink="/"><mat-icon>school</mat-icon><span style="font-family: 'Merriweather', serif;">QuizKid</span></a>
+    </div>
+    <span class="example-spacer"></span>
+    <a routerLink="/auth/login">
+        <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <mat-icon>login</mat-icon>
+        </button>
+    </a>
+    <a routerLink="/auth/register">
+        <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <mat-icon>person</mat-icon>
+        </button>
+    </a>
+</mat-toolbar>

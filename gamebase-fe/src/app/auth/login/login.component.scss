@@ -1,28 +1,19 @@
-:host {
-    display: flex;
-    justify-content: center;
-    margin: 100px 0px;
-  }
+.full-width {
+  width: 100%;
+}
 
-  .mat-form-field {
-    width: 100%;
-    min-width: 300px;
-  }
+.example-spacer {
+  flex: 1 1 auto;
+}
 
-  mat-card-title,
-  mat-card-content {
-    display: flex;
-    justify-content: center;
-  }
+a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
 
-  .error {
-    padding: 16px;
-    width: 300px;
-    color: white;
-    background-color: red;
-  }
-
-  .button {
-    display: flex;
-    justify-content: flex-end;
-  }
+a:hover {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
